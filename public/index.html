@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keep Notes</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Keep Notes</h1>
+      <p class="muted">A minimal notes app (Node + Express)</p>
+    </header>
+
+    <section class="composer">
+      <input id="title" placeholder="Title" />
+      <textarea id="content" placeholder="Take a note..."></textarea>
+      <button id="addBtn">Add Note</button>
+    </section>
+
+    <section>
+      <ul id="notes" class="notes"></ul>
+    </section>
+  </div>
+
+  <template id="note-item">
+    <li class="note">
+      <div class="note-top">
+        <input class="note-title" />
+        <div class="actions">
+          <button class="save">Save</button>
+          <button class="delete danger">Delete</button>
+        </div>
+      </div>
+      <textarea class="note-content"></textarea>
+      <div class="timestamps muted"></div>
+    </li>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>
